@@ -6,7 +6,7 @@ const TodoList = (props) => {
     <div>
       <ul>
         {props.todos.map((todo, index) => {
-          return <TodoListItem todo={todo} index={index} key={index}/>
+          return <TodoListItem todo={todo} index={index} key={index} deleteTodo={props.deleteTodo}/>
         })}
       </ul>
     </div>

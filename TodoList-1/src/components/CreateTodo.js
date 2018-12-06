@@ -8,7 +8,7 @@ class CreateTodo extends React.Component {
     }
   }
   
-  addTodo = (e) => {
+  addTodoHelper = (e) => {
     e.preventDefault();
     this.props.addTodo(this.state.newTodo);
   }
@@ -21,7 +21,7 @@ class CreateTodo extends React.Component {
   render() {
     return (
       <div>
-        <form action="" onSubmit={this.addTodo}>
+        <form action="" onSubmit={this.addTodoHelper}>
           <input type="text" onChange={this.updateItem}/>
           <button type="submit">add</button>
         </form>
